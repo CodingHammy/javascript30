@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Console Tricks!</title>
-  <link rel="icon" href="https://fav.farm/🔥" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
 
-  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+    <script>
+      const dogs = [
+        { name: 'Snickers', age: 2 },
+        { name: 'hugo', age: 8 },
+      ];
 
-  <script>
-    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+      function makeGreen() {
+        const p = document.querySelector('p');
+        p.style.color = '#BADA55';
+        p.style.fontSize = '50px';
+      }
 
-    function makeGreen() {
-      const p = document.querySelector('p');
-      p.style.color = '#BADA55';
-      p.style.fontSize = '50px';
-    }
+      // Regular
+      console.log('hell');
 
-    // Regular
+      // Interpolated
+      console.log(`Hello `);
 
-    // Interpolated
+      // Styled
+      console.log('%c Im great', 'color:red;');
 
-    // Styled
+      // warning!
+      console.warn('Oh No');
 
-    // warning!
+      // Error :|
+      console.error('Error');
 
-    // Error :|
+      // Info
+      console.info('crocadiles eat 3-4 people a year');
+      // Testing
+      console.assert(1 === 2, 'that is wrong');
+      // clearing
 
-    // Info
+      // Viewing DOM Elements
+      // console.dir(p);
+      // Grouping together
+      // dogs.forEach(dog => {
+      //   console.group(`${dog.name}`);
+      //   console.log(`this is ${dog.name}.`);
+      //   console.log(`${dog.name} is ${dog.age} years old.`);
+      //   console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      //   console.group(`${dog.name}`);
+      // });
 
-    // Testing
+      // dogs.forEach(dog => {
+      //   console.groupCollapsed(`${dog.name}`);
+      //   console.log(`this is ${dog.name}.`);
+      //   console.log(`${dog.name} is ${dog.age} years old.`);
+      //   console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      //   console.group(`${dog.name}`);
+      // });
+      // counting
 
-    // clearing
+      console.count('wes');
+      console.count('wes');
+      console.count('wes');
+      console.count('wes');
+      console.count('wes');
 
-    // Viewing DOM Elements
+      // timing
 
-    // Grouping together
-
-    // counting
-
-    // timing
-
-  </script>
-</body>
+      console.time;
+    </script>
+  </body>
 </html>
